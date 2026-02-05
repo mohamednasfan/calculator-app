@@ -1,0 +1,87 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at 30% 30%, #151616, #ACB6E5);
+  perspective: 1000px;
+}
+
+.calculator-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: rotateX(5deg) rotateY(-5deg);
+}
+
+.calculator-container {
+  background: #ffffff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3), 0 10px 20px rgba(0,0,0,0.2);
+  width: 320px;
+  text-align: center;
+  transform-style: preserve-3d;
+}
+
+h1 {
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 28px;
+}
+
+.display {
+  width: 90%;
+  padding: 15px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  text-align: right;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1),
+              inset -2px -2px 5px rgba(255,255,255,0.7);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+}
+
+button {
+  background: linear-gradient(to bottom, #6C63FF, #574FCF);
+  color: white;
+  border: none;
+  padding: 18px;
+  font-size: 18px;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px #574FCF;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: linear-gradient(to bottom, #574FCF, #6C63FF);
+}
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px #574FCF;
+}
+
+button.clear {
+  grid-column: span 4;
+  background: #FF6B6B;
+  box-shadow: 0 6px #C94C4C;
+}
+
+button.clear:hover {
+  background: #C94C4C;
+}
+
+button.clear:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px #C94C4C;
+}
